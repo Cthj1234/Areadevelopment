@@ -24,11 +24,11 @@ public class LoggingAop {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (attributes != null) {
             HttpServletRequest request = attributes.getRequest();
-            String method = request.getMethod();
             String requestURI = request.getRequestURI();
+            String method = request.getMethod();
 
             log.info("Request URL: {}", requestURI);
-            log.info("HTTP Method : {}" , method);
+            log.info("HTTP Method : {}", method);
         }
     }
 }
